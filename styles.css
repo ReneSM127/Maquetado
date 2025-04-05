@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .nav-links a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+  }
+  
+  .auth-buttons a {
+    margin-left: 12px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .register {
+    color: #222;
+  }
+  
+  .login {
+    background-color: #55a7c5;
+    color: #fff;
+  }
+  
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .highlight .icon {
+    background-color: #55a7c5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+  
+  .highlight h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .highlight .blue {
+    color: #55a7c5;
+  }
+  
+  .subtitle {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .description {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .buttons {
+    margin-top: 24px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  .btn.primary {
+    background-color: #55a7c5;
+    color: white;
+  }
+  
+  .btn.secondary {
+    background-color: white;
+    color: #222;
+    border: 1px solid #ccc;
+  }
+  
+  .categories {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px 0;
+  }
+  
+  .categories ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 30px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
