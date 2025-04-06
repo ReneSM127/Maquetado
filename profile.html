@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Tutorías en Matemáticas, Física y Química</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --container-width: 1200px;
+            --header-height: 80px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: var(--header-height);
+        }
+        
+        .header-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .main-nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .auth-nav {
+            display: flex;
+            gap: 15px;
+            margin-left: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .auth-nav a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        
+        .auth-nav a:last-child {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .auth-nav a:last-child:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Main Content */
+        .main-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .course-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px;
+        }
+        
+        .course-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-content ul {
+            list-style-type: none;
+        }
+        
+        .course-content li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .course-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .course-content li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: #f1f5f9;
+            padding: 100px 0;
+        }
+        
+        .about-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            height: 500px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .about-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .feature-icon {
+            background-color: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .feature-text h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .feature-text p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .testimonials-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background-color: #f1f5f9;
+        }
+        
+        .pricing-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .pricing-price {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-price span {
+            font-size: 16px;
+            font-weight: normal;
+            color: var(--text-light);
+        }
+        
+        .pricing-features {
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info p i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bdc3c7;
+            margin-bottom: 15px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"> </div>
+            <nav>
+                <div class="main-nav">
+                    <a href="#">Inicio</a>
+                    <a href="#">Tutorías</a>
+                    <a href="#">Método</a>
+                    <a href="#">Cursos</a>
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="auth-nav">
+                    <a href="#">Registrarse</a>
+                    <a href="#">Iniciar sesión</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Álvaro Mendoza</h1>
+            <p>Clases de Matemáticas, Física y Química para todos los niveles con enfoque en la comprensión profunda de los conceptos fundamentales</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="main-container">
+        <div class="section-title">
+            <h2>Cusos Partidos</h2>
+            <p>Clases personalizadas con explicaciones claras y enfoque en la comprensión. Apoyo en tareas, exámenes y resolución de problemas.</p>
+        </div>
+        
+        <div class="course-cards">
+            <!-- Cálculo -->
+            <div class="course-card">
+                <div class="course-header">
+                    <h3>Cálculo</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Límites y continuidad</li>
+                        <li>Derivadas y aplicaciones</li>
+                        <li>Integrales y técnicas de integración</li>
+                        <li>Series y sucesiones</li>
+                        <li>Ecuaciones diferenciales</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Álgebra lineal -->
+            <div class="course-card">
+                <div class="course-header" style="background-color: #e74c3c;">
+                    <h3>Álgebra lineal</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Vectores y matrices</li>
+                        <li>Determinantes</li>
+                        <li>Espacios vectoriales</li>
+                        <li>Transformaciones lineales</li>
+                        <li>Valores y vectores propios</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Geometría y Trigonometría -->
+            <div class="course-card">
+                <div class="course-header" style="background-color: #2ecc71;">
+                    <h3>Geometría y Trigonometría</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Geometría analítica</li>
+                        <li>Coordenadas polares y paramétricas</li>
+                        <li>Funciones trigonométricas avanzadas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Probabilidad y Estadística -->
+            <div class="course-card">
+                <div class="course-header" style="background-color: #9b59b6;">
+                    <h3>Probabilidad y Estadística</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Distribuciones de probabilidad</li>
+                        <li>Teorema del límite central</li>
+                        <li>Inferencia estadística</li>
+                        <li>Regresión y correlación</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Matemáticas Discretas -->
+            <div class="course-card">
+                <div class="course-header" style="background-color: #f39c12;">
+                    <h3>Matemáticas Discretas</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Teoría de conjuntos</li>
+                        <li>Combinatoria</li>
+                        <li>Lógica matemática</li>
+                        <li>Grafos y algoritmos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Análisis Matemático -->
+            <div class="course-card">
+                <div class="course-header" style="background-color: #1abc9c;">
+                    <h3>Análisis Matemático</h3>
+                </div>
+                <div class="course-content">
+                    <ul>
+                        <li>Espacios métricos</li>
+                        <li>Convergencia de funciones</li>
+                        <li>Series de Fourier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Álvaro Mendoza enseñando">
+            </div>
+            <div class="about-content">
+                <h2>Sobre Álvaro Mendoza</h2>
+                <p>Profesor con más de 10 años de experiencia en la enseñanza de matemáticas, física y química a todos los niveles educativos. Mi enfoque se centra en hacer que los conceptos complejos sean accesibles y comprensibles para todos los estudiantes.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">1</div>
+                        <div class="feature-text">
+                            <h4>Modalidad Flexible</h4>
+                            <p>Clases presenciales u online según tus necesidades y preferencias.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">2</div>
+                        <div class="feature-text">
+                            <h4>Horarios Personalizados</h4>
+                            <p>Adaptamos los horarios a tu disponibilidad y ritmo de aprendizaje.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">3</div>
+                        <div class="feature-text">
+                            <h4>Enfoque Práctico</h4>
+                            <p>Resolución de problemas reales y aplicación de conceptos teóricos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="section-title">
+                <h2>Testimonios de Estudiantes</h2>
+                <p>Lo que dicen nuestros estudiantes sobre las tutorías con Álvaro Mendoza</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Las clases con Álvaro transformaron mi forma de ver las matemáticas. Pasé de reprobar a tener el mejor promedio de mi clase."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Estudiante de Ingeniería</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Gracias a su método de enseñanza, pude entender conceptos que llevaba años sin comprender. ¡Totalmente recomendado!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Juan Pérez</h4>
+                            <p>Estudiante de Bachillerato</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Las clases online son igual de efectivas que las presenciales. Álvaro tiene una gran capacidad para explicar temas complejos de forma sencilla."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Martínez</h4>
+                            <p>Estudiante de Maestría</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><i>✉️</i> L21530365@concun.tecnm.mx</p>
+                <p><i>📱</i> +52 998 381 4748</p>
+                <p><i>📍</i> Cancún, Quintana Roo, México</p>
+                
+                <h3 style="margin-top: 40px;">Horario de Atención</h3>
+                <p><i>🕘</i> Lunes a Viernes: 9:00 am - 8:00 pm</p>
+                <p><i>🕙</i> Sábados: 10:00 am - 3:00 pm</p>
+                <p><i>🚫</i> Domingos: Cerrado</p>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Envíanos un Mensaje</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject">
+                            <option value="">Selecciona un tema</option>
+                            <option value="tutoring">Información sobre tutorías</option>
+                            <option value="pricing">Consulta sobre precios</option>
+                            <option value="schedule">Disponibilidad de horarios</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Álvaro Mendoza</h3>
+                <p>Tutorías académicas personalizadas en Matemáticas, Física y Química para todos los niveles educativos.</p>
+                <div class="social-links">
+                    <a href="#">f</a>
+                    <a href="#">t</a>
+                    <a href="#">in</a>
+                    <a href="#">ig</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#">Inicio</a>
+                <a href="#">Tutorías</a>
+                <a href="#">Método</a>
+                <a href="#">Cursos</a>
+                <a href="#">Precios</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Cursos</h3>
+                <a href="#">Cálculo</a>
+                <a href="#">Álgebra Lineal</a>
+                <a href="#">Geometría</a>
+                <a href="#">Probabilidad</a>
+                <a href="#">Matemáticas Discretas</a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>L21530365@concun.tecnm.mx</p>
+                <p>+52 998 381 4748</p>
+                <p>Cancún, Quintana Roo</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2023 Álvaro Mendoza Tutorías. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
