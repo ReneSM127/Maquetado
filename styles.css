@@ -128,3 +128,413 @@
     font-size: 14px;
   }
   
+  /* Estilos para la sección de beneficios */
+.benefits {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefits-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.view-all {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 8px;
+  background-color: #55a7c5;
+  color: white;
+  border: none;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.benefit-item h3 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+
+.benefit-item p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Estilos para la sección de tutorías */
+.tutorias {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorias-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tutorias-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tutorias-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tutorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tutoria-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tutoria-card:hover {
+  transform: translateY(-5px);
+}
+
+.tutoria-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tutor-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.tutoria-card h3 {
+  color: #0066cc;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.tutoria-card p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para la sección de testimonios */
+.testimonios {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+.testimonios-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonios-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonios-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonio-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonio-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonio-content p::before {
+  content: '"';
+  font-size: 3rem;
+  color: #0066cc;
+  opacity: 0.2;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+}
+
+.testimonio-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.read-story {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-header h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.faq-header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.faq-header strong {
+  color: #3498db;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: #3498db;
+}
+
+.faq-question.active::after {
+  content: '-';
+}
+
+.faq-answer {
+  color: #555;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-list {
+  margin-top: 2rem;
+}
+
+.faq-list h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.faq-list ul {
+  list-style: none;
+}
+
+.faq-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.faq-list li:last-child {
+  border-bottom: none;
+}
+
+/* Estilos para el footer */
+.site-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 3rem 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #3498db;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.copyright {
+  font-weight: bold;
+  margin-bottom: 1.5rem !important;
+}
+
+.email, .phone, .address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email::before {
+  content: "✉";
+}
+
+.phone::before {
+  content: "📞";
+}
+
+.address::before {
+  content: "📍";
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Estilos para la sección de video-lección */
+.video-lesson {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lesson-header h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.lesson-title {
+  color: #3498db;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .lesson-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .lesson-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
