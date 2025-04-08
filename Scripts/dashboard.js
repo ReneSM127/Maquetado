@@ -76,4 +76,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Manejar el envío del formulario
-})
+})  

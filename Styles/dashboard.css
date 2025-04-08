@@ -120,7 +120,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 10;
   }
   
@@ -217,7 +216,6 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
   }
   
@@ -273,7 +271,6 @@
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
   
   .section-header {
@@ -330,7 +327,6 @@
   }
   
   .tutoria-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-3px);
   }
   
@@ -530,7 +526,6 @@
     max-width: 700px;
     max-height: 90vh;
     overflow-y: auto;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: all 0.3s;
   }
@@ -675,6 +670,106 @@
   .cancel-btn:hover {
     background-color: #e0e0e0;
   }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .nav-links a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+  }
+  
+
+  /* Estilos para el footer */
+.site-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 3rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-column a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-column a:hover {
+    color: #3498db;
+  }
+  
+  .contact-info p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .copyright {
+    font-weight: bold;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .email, .phone, .address {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .email::before {
+    content: "✉";
+  }
+  
+  .phone::before {
+    content: "📞";
+  }
+  
+  .address::before {
+    content: "📍";
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+      margin-bottom: 2rem;
+    }
+  }
+  
   
   /* Responsive */
   @media (max-width: 1200px) {
@@ -719,6 +814,27 @@
       margin-right: 0;
       font-size: 1.3em;
     }
+  }
+
+  /* Estilos para el botón de cerrar sesión */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.3s;
+    gap: 8px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b;
   }
   
   @media (max-width: 768px) {
