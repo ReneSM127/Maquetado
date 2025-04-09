@@ -9,20 +9,22 @@
   <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
-    <header>
-        <img src="../Styles/logo.png" alt="Logo" width="40">
-        <nav>
-          <a href="../Views/index.html">Inicio</a>
-          <a href="#">Tutorías</a>
-          <a href="../Views/profile.html">Nosotros</a>
-          <a href="#">Crear</a>
-          <a href="#">Contactar</a>
-        </nav>
-        <div class="auth-buttons">
-          <a href="#">Registrarse</a>
-          <a href="../Views/signup.html">iniciar sesión</a>
-        </div>
-      </header>
+  <header class="navbar">
+    <div class="logo">
+      <img src="../Styles/logo.png" alt="Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="../Views/index.html">Inicio</a>
+      <a href="#">Tutorías</a>
+      <a href="#">Nosotros</a>
+      <a href="../Views/signup.html">Crear</a>
+      <a href="../Views/Contact.html">Contactar</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="../Views/register.html" class="register">Registrarse</a>
+      <a href="../Views/signup.html" class="login">Iniciar sesión</a>
+    </div>
+  </header>
 
   <div class="container">
     <div class="login-box">
@@ -40,8 +42,10 @@
           <input type="password" id="password" placeholder="Ingresa tu contraseña">
         </div>
 
-        <div class="remember-forgot">
-          <label><input type="checkbox"> Estoy de acuerdo con los Términos de uso y la Política de privacidad</label>
+        <div class="remember-forgot2">
+          <label class="remember-label2">
+            <input type="checkbox"> Aceptar Términos de uso 
+          </label>
         </div>
 
         <button type="submit">Registrarse</button>
