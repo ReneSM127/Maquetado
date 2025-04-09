@@ -131,12 +131,44 @@ input, textarea {
     cursor: pointer;
   }
   
-  .remember-forgot {
+  .remember-forgot { 
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     font-size: 14px;
+  }
+  
+  .remember-label {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    line-height: 1.4;
+  }
+
+  .remember-label input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(9px); 
+  }
+
+  .remember-forgot2 { 
+    display: flex;
+    justify-content: flex-start; /* Alinea al principio */
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .remember-label2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap; /* Esto evita que el texto se divida en varias líneas */
+  }
+  
+  .remember-label2 input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(9px); /* Asegura que el checkbox esté alineado verticalmente con el texto */
   }
   
   button {
