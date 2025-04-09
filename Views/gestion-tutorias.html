@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Tutoría | Plataforma de Tutorías</title>
+  <link rel="stylesheet" href="../Styles/styles.css" />
+
+  <link rel="stylesheet" href="../Styles/dashboard.css" />
+  <link rel="stylesheet" href="../Styles/gestion.css" />
+</head>
+<body class="dashboard">
+
+  <!-- Main Content -->
+  <main class="dashboard-content">
+    <header class="dashboard-topbar">
+        <div class="logo">
+            <img src="../Styles/logo.png" alt="Logo" />
+          </div>
+      <div class="topbar-breadcrumbs">
+        <a href="./ProfesorDashboard.html">Mis Tutorías</a> / 
+        <span>Matemáticas Avanzadas</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="logout-btn" id="logout-btn">
+            <i class="icon"></i> 
+            <span class="logout-text">Cerrar sesión</span>
+          </button>
+        <button class="notification-btn"><i class="icon">🔔</i> <span class="badge">3</span></button>
+      </div>
+    </header>
+    
+    <div class="dashboard-container">
+      <!-- Header de la tutoría -->
+      <section class="tutoria-header-section">
+        <div class="tutoria-header-info">
+          <h1>Matemáticas Avanzadas</h1>
+          <p class="tutoria-description">Álgebra lineal y cálculo diferencial para estudiantes universitarios.</p>
+          
+          <div class="tutoria-meta">
+            <div class="meta-item">
+              <span class="meta-icon">👥</span>
+              <span>8 estudiantes inscritos</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">⭐</span>
+              <span>4.9 (15 reseñas)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">📅</span>
+              <span>Lun y Mié, 16:00-18:00</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tutoria-header-actions">
+          <button class="btn primary"><i class="icon">📢</i> Anunciar</button>
+          <button class="btn secondary"><i class="icon">✏️</i> Editar</button>
+        </div>
+      </section>
+      
+      <!-- Pestañas de navegación -->
+      <nav class="tabs-navigation">
+        <a href="#" class="tab active">Estudiantes</a>
+        <a href="#" class="tab">Contenido</a>
+        <a href="#" class="tab">Calendario</a>
+        <a href="#" class="tab">Evaluaciones</a>
+        <a href="#" class="tab">Configuración</a>
+      </nav>
+      
+      <!-- Contenido de estudiantes -->
+      <section class="students-section">
+        <div class="section-header">
+          <h2>Estudiantes Inscritos</h2>
+          
+          <div class="section-actions">
+            <div class="search-students">
+              <input type="text" placeholder="Buscar estudiantes..." />
+              <button><i class="icon">🔍</i></button>
+            </div>
+            <button class="btn primary"><i class="icon">📤</i> Exportar lista</button>
+          </div>
+        </div>
+        
+        <div class="students-table-container">
+          <table class="students-table">
+            <thead>
+              <tr>
+                <th>Estudiante</th>
+                <th>Correo</th>
+                <th>Inscripción</th>
+                <th>Asistencia</th>
+                <th>Progreso</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Estudiante 1 -->
+              <tr>
+                <td>
+                  <div class="student-info">
+                    <img src="student1.jpg" alt="Estudiante" />
+                    <span>María González</span>
+                  </div>
+                </td>
+                <td>maria.g@email.com</td>
+                <td>15/09/2023</td>
+                <td>
+                  <div class="attendance-progress">
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress-badge good">Avanzado</div>
+                </td>
+                <td>
+                  <div class="actions">
+                    <button class="icon-btn" title="Mensaje"><i class="icon">✉️</i></button>
+                    <button class="icon-btn" title="Evaluar"><i class="icon">📝</i></button>
+                    <button class="icon-btn danger" title="Eliminar"><i class="icon">🗑️</i></button>
+                  </div>
+                </td>
+              </tr>
+              
+              <!-- Estudiante 2 -->
+              <tr>
+                <td>
+                  <div class="student-info">
+                    <img src="student2.jpg" alt="Estudiante" />
+                    <span>Carlos Mendoza</span>
+                  </div>
+                </td>
+                <td>carlos.m@email.com</td>
+                <td>22/09/2023</td>
+                <td>
+                  <div class="attendance-progress">
+                    <progress value="60" max="100"></progress>
+                    <span>60%</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="progress-badge medium">Intermedio</div>
+                </td>
+                <td>
+                  <div class="actions">
+                    <button class="icon-btn" title="Mensaje"><i class="icon">✉️</i></button>
+                    <button class="icon-btn" title="Evaluar"><i class="icon">📝</i></button>
+                    <button class="icon-btn danger" title="Eliminar"><i class="icon">🗑️</i></button>
+                  </div>
+                </td>
+              </tr>
+              
+              <!-- Más estudiantes... -->
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="table-footer">
+          <div class="pagination">
+            <button class="page-btn" disabled>← Anterior</button>
+            <span class="page-info">Página 1 de 3</span>
+            <button class="page-btn">Siguiente →</button>
+          </div>
+          
+          <div class="items-per-page">
+            <span>Mostrar:</span>
+            <select>
+              <option>10</option>
+              <option selected>25</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Estadísticas rápidas -->
+      <section class="quick-stats">
+        <div class="stat-card">
+          <h3>Asistencia promedio</h3>
+          <div class="stat-value">78%</div>
+          <div class="stat-trend up">↑ 5% vs mes anterior</div>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Calificación promedio</h3>
+          <div class="stat-value">8.7</div>
+          <div class="stat-trend up">↑ 0.3 vs mes anterior</div>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Nuevos estudiantes</h3>
+          <div class="stat-value">3</div>
+          <div class="stat-trend down">↓ 1 vs mes anterior</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../Scripts/gestion.js"></script>
+</body>
+</html>
