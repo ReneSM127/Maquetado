@@ -168,93 +168,6 @@ nav a:hover::after {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Main Content */
-.main-container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin: var(--section-padding) auto;
-    padding: 0 40px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-size: 36px;
-    color: var(--dark-color);
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.section-title p {
-    font-size: 18px;
-    color: var(--text-light);
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.course-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 30px;
-}
-
-.course-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.course-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.course-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 25px;
-}
-
-.course-header h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.course-content {
-    padding: 25px;
-}
-
-.course-content ul {
-    list-style-type: none;
-}
-
-.course-content li {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-.course-content li:last-child {
-    border-bottom: none;
-}
-
-.course-content li::before {
-    content: '✓';
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
 /* About Section */
 .about-section {
     background-color: #f1f5f9;
@@ -336,171 +249,6 @@ nav a:hover::after {
     margin-bottom: 0;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-    padding: var(--section-padding) 0;
-    background-color: white;
-}
-
-.testimonials-container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.testimonial-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-}
-
-.author-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.author-info h4 {
-    font-size: 17px;
-    margin-bottom: 5px;
-}
-
-.author-info p {
-    font-size: 14px;
-    color: var(--text-light);
-}
-
-/* Pricing Section */
-.pricing-section {
-    padding: var(--section-padding) 0;
-    background-color: #f1f5f9;
-}
-
-.pricing-container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.pricing-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px 30px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.pricing-card.featured {
-    border: 2px solid var(--primary-color);
-}
-
-.featured-badge {
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.pricing-title {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: var(--dark-color);
-    font-weight: 600;
-}
-
-.pricing-price {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.pricing-price span {
-    font-size: 16px;
-    font-weight: normal;
-    color: var(--text-light);
-}
-
-.pricing-features {
-    list-style-type: none;
-    margin-bottom: 30px;
-}
-
-.pricing-features li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
-}
-
-.pricing-features li:last-child {
-    border-bottom: none;
-}
-
-.pricing-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.pricing-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
 
 /* Contact Section */
 .contact-section {
@@ -761,3 +509,91 @@ footer {
         font-size: 16px;
     }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  .perfil {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+  
+  .foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    background-color: #ccc;
+  }
+  
+  .info {
+    flex-grow: 1;
+  }
+  
+  .info h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .subtitulo {
+    color: #666;
+    margin: 4px 0 12px;
+  }
+  
+  .boton {
+    padding: 8px 16px;
+    background-color: #4ba3d7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .descripcion {
+    max-width: 280px;
+  }
+  
+  .descripcion h3 {
+    margin-top: 0;
+  }
+  
+  .titulo-cursos {
+    font-size: 24px;
+    margin: 32px 0 24px;
+  }
+  
+  .grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
