@@ -54,8 +54,11 @@
     align-items: center;
     height: 130vh;
   }
-.form-container, .info-container {
-    width: 48%;
+.info-container {
+    width: 18%;
+}
+.form-container{
+  align-items: center;
 }
 .form-group {
     margin-bottom: 15px;
@@ -72,12 +75,12 @@ input, textarea {
 
 .login-box {
   background: white;
-  padding: 2rem;
+  padding: 20px 30px;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 35%;
+  margin: 30px;
 }
   
   .login-box h2 {
@@ -94,10 +97,11 @@ input, textarea {
 
   .About-box {
     background: #fff;
-    padding: 40px;
+    padding: 20px 30px;
     border-radius: 12px;
-    width: 1000px;
+    width: 50%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    justify-content: center;
   }
   label {
     font-weight: 600;
