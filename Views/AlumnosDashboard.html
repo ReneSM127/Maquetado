@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Profesor | Plataforma de Tutorías</title>
+  <link rel="stylesheet" href="../Styles/styles.css" />
+  <link rel="stylesheet" href="../Styles/dashboard.css" />
+</head>
+<body class="dashboard">
+  <!-- Sidebar -->
+  <!--<aside class="dashboard-sidebar">
+    <div class="sidebar-header">
+      <img src="logo.png" alt="Logo" class="sidebar-logo" />
+      <h2>Panel del Tutor</h2>
+    </div>
+    
+    <nav class="sidebar-menu">
+      <a href="#" class="active"><i class="icon">📊</i> Resumen</a>
+      <a href="#"><i class="icon">📚</i> Mis Tutorías</a>
+      <a href="#"><i class="icon">🗓️</i> Calendario</a>
+      <a href="#"><i class="icon">👥</i> Estudiantes</a>
+      <a href="#"><i class="icon">💬</i> Mensajes</a>
+      <a href="#"><i class="icon">⚙️</i> Configuración</a>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <img src="profile-placeholder.jpg" alt="Foto de perfil" />
+        <div>
+          <strong>Prof. John Smith</strong>
+          <small>Matemáticas</small>
+        </div>
+      </div>
+      <a href="#" class="logout-btn"><i class="icon">🚪</i> Cerrar sesión</a>
+    </div>
+  </aside>
+  -->
+
+  <!-- Main Content -->
+  <main class="dashboard-content">
+    <header class="dashboard-topbar">
+        <div class="logo">
+            <img src="../Styles/logo.png" alt="Logo" />
+          </div>
+          <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Tutorías</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Crear</a>
+            <a href="#">Contactar</a>
+          </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar tutorías, estudiantes..." />
+        <button><i class="icon">🔍</i></button>
+      </div>
+      <div class="topbar-actions">
+        <button class="logout-btn" id="logout-btn">
+            <i class="icon"></i> 
+            <span class="logout-text">Cerrar sesión</span>
+          </button>
+      </div>
+    </header>
+    
+    <div class="dashboard-container">
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">📚</div>
+          <div>
+            <h3>5</h3>
+            <p>Tutorías inscritas</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">👥</div>
+          <div>
+            <h3>23</h3>
+            <p>Tutorias completas</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange">⭐</div>
+          <div>
+            <h3>4.8</h3>
+            <p>Calificación promedio</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon purple">💬</div>
+          <div>
+            <h3>12</h3>
+            <p>Mensajes nuevos</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tutorías en curso -->
+      <section class="tutorias-section">
+        <div class="section-header">
+          <h2>Tutorías en Curso</h2>
+          <div class="section-actions">
+            <select class="filter-select">
+              <option>Todas</option>
+              <option>Matemáticas</option>
+              <option>Ciencias</option>
+              <option>Literatura</option>
+            </select>
+            <button class="view-all">Ver todas</button>
+          </div>
+        </div>
+        
+        <div class="tutorias-grid">
+          <!-- Tutoría 1 -->
+          <div class="tutoria-card">
+            <div class="tutoria-header">
+              <span class="badge active">Activa</span>
+              <div class="tutoria-actions">
+                <button class="edit-btn">✏️</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <h3>Matemáticas Avanzadas</h3>
+            <p class="tutoria-desc">Álgebra lineal y cálculo diferencial para estudiantes universitarios.</p>
+            
+            <div class="tutoria-meta">
+              <div class="meta-item">
+                <span class="meta-icon">👥</span>
+                <span>8 estudiantes</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">⭐</span>
+                <span>4.9 (15 reseñas)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">📅</span>
+                <span>Lun y Mié, 16:00-18:00</span>
+              </div>
+            </div>
+            
+            <div class="tutoria-footer">
+              <a href="#" class="btn secondary">Ver detalles</a>
+              <a href="#" class="btn primary">Abandonar</a>
+            </div>
+          </div>
+          
+          <!-- Tutoría 2 -->
+          <div class="tutoria-card">
+            <div class="tutoria-header">
+              <span class="badge active">Activa</span>
+              <div class="tutoria-actions">
+                <button class="edit-btn">✏️</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <h3>Introducción a la Física</h3>
+            <p class="tutoria-desc">Conceptos básicos de mecánica para estudiantes de preparatoria.</p>
+            
+            <div class="tutoria-meta">
+              <div class="meta-item">
+                <span class="meta-icon">👥</span>
+                <span>5 estudiantes</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">⭐</span>
+                <span>4.7 (8 reseñas)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">📅</span>
+                <span>Mar y Jue, 14:00-15:30</span>
+              </div>
+            </div>
+            
+            <div class="tutoria-footer">
+              <a href="#" class="btn secondary">Ver detalles</a>
+              <a href="#" class="btn primary">Abandonar</a>
+            </div>
+          </div>
+          
+          <!-- Tutoría 3 -->
+          <div class="tutoria-card">
+            <div class="tutoria-header">
+              <span class="badge active">Activa</span>
+              <div class="tutoria-actions">
+                <button class="edit-btn">✏️</button>
+                <button class="delete-btn">🗑️</button>
+              </div>
+            </div>
+            <h3>Preparación para Exámenes</h3>
+            <p class="tutoria-desc">Técnicas de estudio y resolución de problemas para exámenes finales.</p>
+            
+            <div class="tutoria-meta">
+              <div class="meta-item">
+                <span class="meta-icon">👥</span>
+                <span>10 estudiantes</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">⭐</span>
+                <span>4.8 (22 reseñas)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">📅</span>
+                <span>Viernes, 10:00-13:00</span>
+              </div>
+            </div>
+            
+            <div class="tutoria-footer">
+              <a href="#" class="btn secondary">Ver detalles</a>
+              <a href="#" class="btn primary">Abandonar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Explorar tutorias -->
+      <section class="sessions-section">
+        <div class="section-header">
+          <h2>Explorar Tutorias</h2>
+          <button class="view-all">Ver tutorias</button>
+        </div>
+        
+        <div class="sessions-list">
+          <!-- Sesión 1 -->
+          <div class="session-item">
+            <div class="session-date">
+              <span class="day">15</span>
+              <span class="month">Oct</span>
+            </div>
+            <div class="session-info">
+              <h3>Matemáticas Avanzadas</h3>
+              <p>16:00 - 18:00 | Profesor Pedro</p>
+            </div>
+            <div class="session-actions">
+              <button class="btn secondary">Detalles</button>
+              <button class="btn primary">Inscribirse</button>
+            </div>
+          </div>
+          
+          <!-- Sesión 2 -->
+          <div class="session-item">
+            <div class="session-date">
+              <span class="day">16</span>
+              <span class="month">Oct</span>
+            </div>
+            <div class="session-info">
+              <h3>Introducción a la Física</h3>
+              <p>14:00 - 15:30 | Profesor Pedro</p>
+            </div>
+            <div class="session-actions">
+              <button class="btn secondary">Detalles</button>
+              <button class="btn primary">Inscribirse</button>
+            </div>
+          </div>
+          
+          <!-- Sesión 3 -->
+          <div class="session-item">
+            <div class="session-date">
+              <span class="day">17</span>
+              <span class="month">Oct</span>
+            </div>
+            <div class="session-info">
+              <h3>Preparación para Exámenes</h3>
+              <p>10:00 - 13:00 | Profesor Pedro</p>
+            </div>
+            <div class="session-actions">
+              <button class="btn secondary">Detalles</button>
+              <button class="btn primary">Inscribirse</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h4>Home</h4>
+            <ul>
+              <li><a href="#">Benefits</a></li>
+              <li><a href="#">Our Courses</a></li>
+              <li><a href="#">Our Testimonials</a></li>
+              <li><a href="#">Our FAQ</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Achievements</a></li>
+              <li><a href="#">Our Goals</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-column contact-info">
+            <p class="copyright">© TucanClase.</p>
+            <p class="email">L21530365@concun.tecnm.mx</p>
+            <p class="phone">+52 998 381 4748</p>
+            <p class="address">Somewhere in the World</p>
+          </div>
+        </div>
+      </footer>
+    
+  </main>
+  
+  <!-- Modal para nueva tutoría -->
+  <div class="modal" id="tutoria-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Crear Nueva Tutoría</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      
+      <form class="tutoria-form">
+        <div class="form-group">
+          <label for="tutoria-title">Título de la tutoría</label>
+          <input type="text" id="tutoria-title" placeholder="Ej: Matemáticas Básicas" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="tutoria-category">Categoría</label>
+          <select id="tutoria-category" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="matematicas">Matemáticas</option>
+            <option value="ciencias">Ciencias</option>
+            <option value="literatura">Literatura</option>
+            <option value="idiomas">Idiomas</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="tutoria-level">Nivel</label>
+          <select id="tutoria-level" required>
+            <option value="">Selecciona un nivel</option>
+            <option value="basico">Básico</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="tutoria-desc">Descripción</label>
+          <textarea id="tutoria-desc" rows="4" placeholder="Describe los temas que cubrirás, metodología, etc." required></textarea>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tutoria-duration">Duración (semanas)</label>
+            <input type="number" id="tutoria-duration" min="1" max="52" value="4" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="tutoria-price">Precio (por sesión)</label>
+            <input type="number" id="tutoria-price" min="0" step="0.01" placeholder="0.00" required />
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Horarios</label>
+          <div class="schedule-container">
+            <div class="schedule-item">
+              <select class="schedule-day">
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miércoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+                <option>Sábado</option>
+                <option>Domingo</option>
+              </select>
+              <input type="time" class="schedule-start" value="16:00" />
+              <span>a</span>
+              <input type="time" class="schedule-end" value="18:00" />
+              <button type="button" class="remove-schedule">🗑️</button>
+            </div>
+          </div>
+          <button type="button" class="add-schedule">➕ Agregar otro horario</button>
+        </div>
+        
+        <div class="form-group">
+          <label for="tutoria-materials">Materiales de apoyo (opcional)</label>
+          <input type="file" id="tutoria-materials" multiple />
+          <small>Puedes subir PDFs, presentaciones, imágenes, etc.</small>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn secondary cancel-btn">Cancelar</button>
+          <button type="submit" class="btn primary">Crear Tutoría</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="../Scripts/dashboard.js"></script>
+</body>
+</html>
