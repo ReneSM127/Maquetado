@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Styles/signup-sty.css">
+  <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <header>
+        <img src="../Styles/logo.png" alt="Logo" width="40">
+        <nav>
+          <a href="../Views/index.html">Inicio</a>
+          <a href="#">Tutorías</a>
+          <a href="../Views/profile.html">Nosotros</a>
+          <a href="#">Crear</a>
+          <a href="#">Contactar</a>
+        </nav>
+        <div class="auth-buttons">
+          <a href="#">Registrarse</a>
+          <a href="../Views/signup.html">iniciar sesión</a>
+        </div>
+      </header>
+
+  <div class="container">
+    <div class="login-box">
+      <h2>Registrarse</h2>
+      <p>Cree una cuenta para desbloquear más funciones.</p>
+      <form>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo</label>
+        <input type="email" id="email" placeholder="Ingresa tu correo">
+
+        <label for="password">Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Ingresa tu contraseña">
+        </div>
+
+        <div class="remember-forgot">
+          <label><input type="checkbox"> Estoy de acuerdo con los Términos de uso y la Política de privacidad</label>
+        </div>
+
+        <button type="submit">Registrarse</button>
+        <div class="divider">o</div>
+        <div class="google-btn">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+          Registrarse con Google
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Home</h4>
+        <ul>
+          <li><a href="#">Benefits</a></li>
+          <li><a href="#">Our Courses</a></li>
+          <li><a href="#">Our Testimonials</a></li>
+          <li><a href="#">Our FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Achievements</a></li>
+          <li><a href="#">Our Goals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column contact-info">
+        <p class="copyright">© 2023 Skillbridge. All rights reserved.</p>
+        <p class="email">L21530365@concun.tecnm.mx</p>
+        <p class="phone">+52 998 381 4748</p>
+        <p class="address">Somewhere in the World</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
