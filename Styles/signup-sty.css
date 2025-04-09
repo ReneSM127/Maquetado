@@ -47,7 +47,29 @@
     align-items: center;
     height: 100vh;
   }
-  
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+  }
+.form-container, .info-container {
+    width: 48%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+}
+
   .login-box {
     background: #fff;
     padding: 40px;
@@ -67,13 +89,21 @@
     margin-bottom: 30px;
     color: #666;
   }
-  
+
+  .About-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 1000px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
   label {
     font-weight: 600;
     margin-bottom: 8px;
     display: block;
   }
   
+  input[type="tel"],
   input[type="text"],
   input[type="email"],
   input[type="password"] {
