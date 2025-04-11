@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gestión de Tutoría | Plataforma de Tutorías</title>
   <link rel="stylesheet" href="../Styles/styles.css" />
 
   <link rel="stylesheet" href="../Styles/dashboard.css" />
   <link rel="stylesheet" href="../Styles/gestion.css" />
 </head>
+
 <body class="dashboard">
 
-  <!-- Main Content -->
   <main class="dashboard-content">
     <header class="dashboard-topbar">
       <div class="logo">
@@ -19,9 +20,9 @@
       </div>
       <nav class="nav-links">
         <a href="../Views/index.html">Inicio</a>
-        <a href="#">Tutorías</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Crear</a>
+        <a href="../Views/tutorias.html">Tutorías</a>
+        <a href="../Views/AboutUs.html">Nosotros</a>
+        <a href="../Views/signup.html">Crear</a>
         <a href="../Views/Contact.html">Contactar</a>
       </nav>
       <div class="search-bar">
@@ -41,14 +42,14 @@
         </button>
       </div>
     </header>
-    
+
     <div class="dashboard-container">
       <!-- Header de la tutoría -->
       <section class="tutoria-header-section">
         <div class="tutoria-header-info">
           <h1>Matemáticas Avanzadas</h1>
           <p class="tutoria-description">Álgebra lineal y cálculo diferencial para estudiantes universitarios.</p>
-          
+
           <div class="tutoria-meta">
             <div class="meta-item">
               <span class="meta-icon">👥</span>
@@ -64,13 +65,13 @@
             </div>
           </div>
         </div>
-        
+
         <div class="tutoria-header-actions">
           <button class="btn primary"><i class="icon">📢</i> Anunciar</button>
           <button class="btn secondary"><i class="icon">✏️</i> Editar</button>
         </div>
       </section>
-      
+
       <!-- Pestañas de navegación -->
       <nav class="tabs-navigation">
         <a href="#" class="tab active">Estudiantes</a>
@@ -79,12 +80,12 @@
         <a href="#" class="tab">Evaluaciones</a>
         <a href="#" class="tab">Configuración</a>
       </nav>
-      
+
       <!-- Contenido de estudiantes -->
       <section class="students-section">
         <div class="section-header">
           <h2>Estudiantes Inscritos</h2>
-          
+
           <div class="section-actions">
             <div class="search-students">
               <input type="text" placeholder="Buscar estudiantes..." />
@@ -93,7 +94,7 @@
             <button class="btn primary"><i class="icon">📤</i> Exportar lista</button>
           </div>
         </div>
-        
+
         <div class="students-table-container">
           <table class="students-table">
             <thead>
@@ -134,7 +135,7 @@
                   </div>
                 </td>
               </tr>
-              
+
               <!-- Estudiante 2 -->
               <tr>
                 <td>
@@ -162,19 +163,19 @@
                   </div>
                 </td>
               </tr>
-              
+
               <!-- Más estudiantes... -->
             </tbody>
           </table>
         </div>
-        
+
         <div class="table-footer">
           <div class="pagination">
             <button class="page-btn" disabled>← Anterior</button>
             <span class="page-info">Página 1 de 3</span>
             <button class="page-btn">Siguiente →</button>
           </div>
-          
+
           <div class="items-per-page">
             <span>Mostrar:</span>
             <select>
@@ -186,7 +187,7 @@
           </div>
         </div>
       </section>
-      
+
       <!-- Estadísticas rápidas -->
       <section class="quick-stats">
         <div class="stat-card">
@@ -194,13 +195,13 @@
           <div class="stat-value">78%</div>
           <div class="stat-trend up">↑ 5% vs mes anterior</div>
         </div>
-        
+
         <div class="stat-card">
           <h3>Calificación promedio</h3>
           <div class="stat-value">8.7</div>
           <div class="stat-trend up">↑ 0.3 vs mes anterior</div>
         </div>
-        
+
         <div class="stat-card">
           <h3>Nuevos estudiantes</h3>
           <div class="stat-value">3</div>
@@ -219,7 +220,7 @@
             <li><a href="#">Our FAQ</a></li>
           </ul>
         </div>
-  
+
         <div class="footer-column">
           <h4>About Us</h4>
           <ul>
@@ -228,7 +229,7 @@
             <li><a href="#">Our Goals</a></li>
           </ul>
         </div>
-  
+
         <div class="footer-column contact-info">
           <p class="copyright">© TucanClase.</p>
           <p class="email">L21530365@concun.tecnm.mx</p>
@@ -241,4 +242,5 @@
 
   <script src="../Scripts/gestion.js"></script>
 </body>
+
 </html>

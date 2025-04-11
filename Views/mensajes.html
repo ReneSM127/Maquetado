@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mensajería | Plataforma de Tutorías</title>
   <link rel="stylesheet" href="../Styles/dashboard.css" />
   <link rel="stylesheet" href="../Styles/mensajeria.css" />
   <link rel="stylesheet" href="../Styles/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
+
 <body class="dashboard">
-  <!-- Sidebar (igual que en dashboard.html) -->
 
   <!-- Main Content -->
   <main class="dashboard-content">
     <header class="dashboard-topbar">
-        <div class="logo">
-            <img src="../Styles/logo.png" alt="Logo" />
-          </div>
-          <nav class="nav-links">
-            <a href="../Views/index.html">Inicio</a>
-            <a href="#">Tutorías</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Crear</a>
-            <a href="../Views/Contact.html">Contactar</a>
-          </nav>
+      <div class="logo">
+        <img src="../Styles/logo.png" alt="Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="../Views/index.html">Inicio</a>
+        <a href="../Views/tutorias.html">Tutorías</a>
+        <a href="../Views/AboutUs.html">Nosotros</a>
+        <a href="../Views/signup.html">Crear</a>
+        <a href="../Views/Contact.html">Contactar</a>
+      </nav>
       <div class="search-bar">
         <input type="text" placeholder="Buscar tutorías, estudiantes..." />
         <button><i class="icon">🔍</i></button>
       </div>
       <div class="topbar-actions">
         <button class="notification-btn"><i class="icon">🔔</i> <span class="badge">3</span></button>
-        <button class="add-btn" id="open-tutoria-modal"><i class="icon"></i> Nueva Tutoría</button>
         <button class="logout-btn" id="logout-btn">
-            <i class="icon"></i> 
-            <span class="logout-text">Cerrar sesión</span>
-          </button>
+          <i class="icon"></i>
+          <span class="logout-text">Cerrar sesión</span>
+        </button>
       </div>
     </header>
-    
+
     <div class="dashboard-container mensajeria-container">
       <!-- Sidebar de conversaciones -->
       <aside class="conversaciones-sidebar">
@@ -48,12 +48,12 @@
             <i class="fas fa-plus"></i> Nuevo mensaje
           </button>
         </div>
-        
+
         <div class="search-conversaciones">
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Buscar conversaciones..." />
         </div>
-        
+
         <div class="conversaciones-list">
           <!-- Conversación 1 -->
           <div class="conversacion-item active">
@@ -70,7 +70,7 @@
               <span class="unread-count">2</span>
             </div>
           </div>
-          
+
           <!-- Conversación 2 -->
           <div class="conversacion-item">
             <div class="conversacion-avatar">
@@ -85,11 +85,11 @@
               <p class="last-message">Gracias por la explicación, ahora lo entiendo mejor</p>
             </div>
           </div>
-          
+
           <!-- Más conversaciones... -->
         </div>
       </aside>
-      
+
       <!-- Área de mensajes -->
       <section class="mensajes-area">
         <!-- Header de la conversación -->
@@ -105,14 +105,14 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Lista de mensajes -->
         <div class="mensajes-list">
           <!-- Fecha separadora -->
           <div class="message-date">
             <span>Hoy, 10 de Octubre</span>
           </div>
-          
+
           <!-- Mensaje recibido -->
           <div class="message received">
             <div class="message-avatar">
@@ -120,25 +120,27 @@
             </div>
             <div class="message-content">
               <div class="message-text">
-                Hola profesor, tengo una duda sobre el ejercicio 5 de la tarea. No entiendo cómo aplicar la fórmula que vimos en clase.
+                Hola profesor, tengo una duda sobre el ejercicio 5 de la tarea. No entiendo cómo aplicar la fórmula que
+                vimos en clase.
               </div>
               <div class="message-time">10:45 AM</div>
             </div>
           </div>
-          
+
           <!-- Mensaje enviado -->
           <div class="message sent">
             <div class="message-content">
               <div class="message-text">
-                Hola María, claro que sí. ¿Podrías decirme exactamente en qué parte te quedaste atascada? ¿Es con la derivada o con la aplicación de la fórmula?
+                Hola María, claro que sí. ¿Podrías decirme exactamente en qué parte te quedaste atascada? ¿Es con la
+                derivada o con la aplicación de la fórmula?
               </div>
               <div class="message-time">10:48 AM <i class="fas fa-check-double read"></i></div>
             </div>
           </div>
-          
+
           <!-- Más mensajes... -->
         </div>
-        
+
         <!-- Área de escritura -->
         <div class="message-input-area">
           <button class="attachment-btn"><i class="fas fa-paperclip"></i></button>
@@ -151,14 +153,14 @@
           </div>
         </div>
       </section>
-      
+
       <!-- Sidebar de información (opcional) -->
       <aside class="chat-info-sidebar">
         <div class="info-header">
           <h3>Información</h3>
           <button class="close-info-btn"><i class="fas fa-times"></i></button>
         </div>
-        
+
         <div class="user-info">
           <div class="user-avatar">
             <img src="../Styles/foto.png" alt="Estudiante" />
@@ -166,7 +168,7 @@
           </div>
           <h3>María González</h3>
           <p class="user-role">Estudiante - Matemáticas Avanzadas</p>
-          
+
           <div class="user-meta">
             <div class="meta-item">
               <i class="fas fa-envelope"></i>
@@ -182,7 +184,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="info-section">
           <h4>Archivos compartidos</h4>
           <div class="shared-files">
@@ -196,7 +198,7 @@
               </div>
               <button class="download-btn"><i class="fas fa-download"></i></button>
             </div>
-            
+
             <div class="file-item">
               <div class="file-icon">
                 <i class="fas fa-file-image"></i>
@@ -220,7 +222,7 @@
         <h2>Nuevo mensaje</h2>
         <button class="close-modal">&times;</button>
       </div>
-      
+
       <div class="modal-body">
         <div class="form-group">
           <label for="recipient">Para:</label>
@@ -231,17 +233,17 @@
             <option value="4">Grupo - Física Básica</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="message-subject">Asunto (opcional):</label>
           <input type="text" id="message-subject" placeholder="Ej: Dudas sobre la tarea 3" />
         </div>
-        
+
         <div class="form-group">
           <label for="message-content">Mensaje:</label>
           <textarea id="message-content" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
         </div>
-        
+
         <div class="form-actions">
           <button type="button" class="btn secondary cancel-btn">Cancelar</button>
           <button type="submit" class="btn primary">Enviar mensaje</button>
@@ -259,7 +261,7 @@
             <li><a href="#">Our FAQ</a></li>
           </ul>
         </div>
-  
+
         <div class="footer-column">
           <h4>About Us</h4>
           <ul>
@@ -268,7 +270,7 @@
             <li><a href="#">Our Goals</a></li>
           </ul>
         </div>
-  
+
         <div class="footer-column contact-info">
           <p class="copyright">© TucanClase.</p>
           <p class="email">L21530365@concun.tecnm.mx</p>
@@ -281,4 +283,5 @@
 
   <script src="../Scripts/mensajeria.js"></script>
 </body>
+
 </html>

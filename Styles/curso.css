@@ -1,0 +1,284 @@
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* Encabezado del curso */
+.course-header {
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.course-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.instructor span {
+    font-weight: 600;
+}
+
+/* Descripción del curso */
+.course-description {
+    margin-bottom: 2.5rem;
+}
+
+.course-description h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 0.5rem;
+}
+
+/* Detalles del curso */
+.course-details {
+    margin-bottom: 2.5rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.detail-item h3 {
+    color: #3a7bd5;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Contenido del curso */
+.course-content {
+    margin-bottom: 3rem;
+}
+
+.course-content h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 0.5rem;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.module {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.module h3 {
+    color: #3a7bd5;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.module ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.module li {
+    margin-bottom: 0.5rem;
+}
+
+/* Sección del instructor */
+.instructor-section {
+    margin-bottom: 3rem;
+}
+
+.instructor-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 0.5rem;
+}
+
+.instructor-profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.instructor-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3a7bd5;
+}
+
+.instructor-info h3 {
+    color: #3a7bd5;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.instructor-title {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.instructor-bio {
+    margin: 0;
+}
+
+/* Sección de inscripción */
+.enrollment-section {
+    margin-bottom: 3rem;
+}
+
+.enrollment-card {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.enrollment-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a7bd5;
+    margin-bottom: 0.5rem;
+}
+
+.original-price {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #999;
+    font-weight: 400;
+}
+
+.discount {
+    background: #ff6b6b;
+    color: white;
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.benefits {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
+.benefits li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.benefits li:before {
+    content: "✓";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.enroll-button {
+    background: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.enroll-button:hover {
+    background: #2c5fb3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 123, 213, 0.4);
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .instructor-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .instructor-info {
+        text-align: center;
+    }
+    
+    .benefits {
+        text-align: center;
+    }
+    
+    .benefits li {
+        text-align: left;
+    }
+}
