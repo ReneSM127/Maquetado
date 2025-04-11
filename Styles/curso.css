@@ -1,11 +1,3 @@
-/* Estilos generales */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-}
 
 .container {
     width: 85%;
@@ -252,33 +244,4 @@ h1, h2, h3 {
     background: #2c5fb3;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(58, 123, 213, 0.4);
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 3rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .instructor-profile {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .instructor-info {
-        text-align: center;
-    }
-    
-    .benefits {
-        text-align: center;
-    }
-    
-    .benefits li {
-        text-align: left;
-    }
 }
