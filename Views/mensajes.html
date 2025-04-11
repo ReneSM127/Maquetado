@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mensajería | Plataforma de Tutorías</title>
+  <link rel="stylesheet" href="../Styles/dashboard.css" />
+  <link rel="stylesheet" href="../Styles/mensajeria.css" />
+  <link rel="stylesheet" href="../Styles/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body class="dashboard">
+  <!-- Sidebar (igual que en dashboard.html) -->
+
+  <!-- Main Content -->
+  <main class="dashboard-content">
+    <header class="dashboard-topbar">
+        <div class="logo">
+            <img src="../Styles/logo.png" alt="Logo" />
+          </div>
+          <nav class="nav-links">
+            <a href="../Views/index.html">Inicio</a>
+            <a href="#">Tutorías</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Crear</a>
+            <a href="../Views/Contact.html">Contactar</a>
+          </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar tutorías, estudiantes..." />
+        <button><i class="icon">🔍</i></button>
+      </div>
+      <div class="topbar-actions">
+        <button class="notification-btn"><i class="icon">🔔</i> <span class="badge">3</span></button>
+        <button class="add-btn" id="open-tutoria-modal"><i class="icon"></i> Nueva Tutoría</button>
+        <button class="logout-btn" id="logout-btn">
+            <i class="icon"></i> 
+            <span class="logout-text">Cerrar sesión</span>
+          </button>
+      </div>
+    </header>
+    
+    <div class="dashboard-container mensajeria-container">
+      <!-- Sidebar de conversaciones -->
+      <aside class="conversaciones-sidebar">
+        <div class="conversaciones-header">
+          <h2>Conversaciones</h2>
+          <button class="btn primary" id="new-message-btn">
+            <i class="fas fa-plus"></i> Nuevo mensaje
+          </button>
+        </div>
+        
+        <div class="search-conversaciones">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Buscar conversaciones..." />
+        </div>
+        
+        <div class="conversaciones-list">
+          <!-- Conversación 1 -->
+          <div class="conversacion-item active">
+            <div class="conversacion-avatar">
+              <img src="../Styles/foto.png" alt="Estudiante" />
+              <span class="status online"></span>
+            </div>
+            <div class="conversacion-info">
+              <div class="conversacion-header">
+                <h3>María González</h3>
+                <span class="time">10:45 AM</span>
+              </div>
+              <p class="last-message">Hola profesor, tengo una duda sobre el ejercicio 5...</p>
+              <span class="unread-count">2</span>
+            </div>
+          </div>
+          
+          <!-- Conversación 2 -->
+          <div class="conversacion-item">
+            <div class="conversacion-avatar">
+              <img src="../Styles/foto.png" alt="Estudiante" />
+              <span class="status offline"></span>
+            </div>
+            <div class="conversacion-info">
+              <div class="conversacion-header">
+                <h3>Carlos Mendoza</h3>
+                <span class="time">Ayer</span>
+              </div>
+              <p class="last-message">Gracias por la explicación, ahora lo entiendo mejor</p>
+            </div>
+          </div>
+          
+          <!-- Más conversaciones... -->
+        </div>
+      </aside>
+      
+      <!-- Área de mensajes -->
+      <section class="mensajes-area">
+        <!-- Header de la conversación -->
+        <div class="mensajes-header">
+          <div class="current-chat-info">
+            <div class="chat-avatar">
+              <img src="../Styles/foto.png" alt="Estudiante" />
+              <span class="status online"></span>
+            </div>
+            <div>
+              <h2>María González</h2>
+              <p class="status-text">En línea</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lista de mensajes -->
+        <div class="mensajes-list">
+          <!-- Fecha separadora -->
+          <div class="message-date">
+            <span>Hoy, 10 de Octubre</span>
+          </div>
+          
+          <!-- Mensaje recibido -->
+          <div class="message received">
+            <div class="message-avatar">
+              <img src="../Styles/foto.png" alt="Estudiante" />
+            </div>
+            <div class="message-content">
+              <div class="message-text">
+                Hola profesor, tengo una duda sobre el ejercicio 5 de la tarea. No entiendo cómo aplicar la fórmula que vimos en clase.
+              </div>
+              <div class="message-time">10:45 AM</div>
+            </div>
+          </div>
+          
+          <!-- Mensaje enviado -->
+          <div class="message sent">
+            <div class="message-content">
+              <div class="message-text">
+                Hola María, claro que sí. ¿Podrías decirme exactamente en qué parte te quedaste atascada? ¿Es con la derivada o con la aplicación de la fórmula?
+              </div>
+              <div class="message-time">10:48 AM <i class="fas fa-check-double read"></i></div>
+            </div>
+          </div>
+          
+          <!-- Más mensajes... -->
+        </div>
+        
+        <!-- Área de escritura -->
+        <div class="message-input-area">
+          <button class="attachment-btn"><i class="fas fa-paperclip"></i></button>
+          <div class="input-wrapper">
+            <textarea placeholder="Escribe un mensaje..." rows="1"></textarea>
+            <div class="input-actions">
+              <button class="emoji-btn"><i class="far fa-smile"></i></button>
+              <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Sidebar de información (opcional) -->
+      <aside class="chat-info-sidebar">
+        <div class="info-header">
+          <h3>Información</h3>
+          <button class="close-info-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="user-info">
+          <div class="user-avatar">
+            <img src="../Styles/foto.png" alt="Estudiante" />
+            <span class="status online"></span>
+          </div>
+          <h3>María González</h3>
+          <p class="user-role">Estudiante - Matemáticas Avanzadas</p>
+          
+          <div class="user-meta">
+            <div class="meta-item">
+              <i class="fas fa-envelope"></i>
+              <span>maria.g@email.com</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-phone"></i>
+              <span>+52 55 1234 5678</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-book"></i>
+              <span>3 tutorías activas</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-section">
+          <h4>Archivos compartidos</h4>
+          <div class="shared-files">
+            <div class="file-item">
+              <div class="file-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="file-info">
+                <p class="file-name">Ejercicios Tema 3.pdf</p>
+                <p class="file-meta">2.4 MB · Hace 3 días</p>
+              </div>
+              <button class="download-btn"><i class="fas fa-download"></i></button>
+            </div>
+            
+            <div class="file-item">
+              <div class="file-icon">
+                <i class="fas fa-file-image"></i>
+              </div>
+              <div class="file-info">
+                <p class="file-name">Solución problema 5.png</p>
+                <p class="file-meta">1.1 MB · Ayer</p>
+              </div>
+              <button class="download-btn"><i class="fas fa-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Modal nuevo mensaje -->
+  <div class="modal" id="new-message-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Nuevo mensaje</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="recipient">Para:</label>
+          <select id="recipient" class="select2" multiple>
+            <option value="1">María González</option>
+            <option value="2">Carlos Mendoza</option>
+            <option value="3">Grupo - Matemáticas Avanzadas</option>
+            <option value="4">Grupo - Física Básica</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message-subject">Asunto (opcional):</label>
+          <input type="text" id="message-subject" placeholder="Ej: Dudas sobre la tarea 3" />
+        </div>
+        
+        <div class="form-group">
+          <label for="message-content">Mensaje:</label>
+          <textarea id="message-content" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn secondary cancel-btn">Cancelar</button>
+          <button type="submit" class="btn primary">Enviar mensaje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Scripts/mensajeria.js"></script>
+</body>
+</html>
