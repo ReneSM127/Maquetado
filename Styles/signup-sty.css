@@ -52,8 +52,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    height: 120%;
   }
+
 .info-container {
     width: 18%;
 }
@@ -224,5 +225,10 @@ input, textarea {
   .google-btn img {
     width: 20px;
     margin-right: 10px;
+  }
+
+  .img-centro {
+    margin: 10px auto 10px;
+    display: block;
   }
   
