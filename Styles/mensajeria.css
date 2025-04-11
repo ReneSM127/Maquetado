@@ -581,3 +581,82 @@
       max-width: 85%;
     }
   }
+  /* Estilos para el footer */
+.site-footer {
+  background-color: white;
+  color: #ecf0f1;
+  padding: 3rem 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #3498db;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.copyright {
+  font-weight: bold;
+  margin-bottom: 1.5rem !important;
+  color: black;
+}
+
+.email, .phone, .address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+}
+
+.email::before {
+  content: "✉";
+}
+
+.phone::before {
+  content: "📞";
+}
+
+.address::before {
+  content: "📍";
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+}
