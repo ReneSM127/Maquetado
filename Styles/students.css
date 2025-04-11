@@ -1,87 +1,120 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+/* Estilos específicos para el perfil */
+.profile-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  
-  .perfil-container {
-    max-width: 700px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .perfil-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .avatar {
-    width: 120px;
-    height: 120px;
+    display: flex;
+    overflow: hidden;
+}
+
+.profile-sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #3498db;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-  }
-  
-  .perfil-header h1 {
-    margin-top: 15px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .perfil-header p {
-    color: #777;
-    font-size: 16px;
-  }
-  
-  .perfil-info,
-  .perfil-academico {
-    margin-bottom: 25px;
-  }
-  
-  h2 {
-    color: #3498db;
-    margin-bottom: 10px;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    margin-bottom: 8px;
-    color: #555;
-  }
-  
-  strong {
-    color: #333;
-  }
-  
-  .perfil-acciones {
-    text-align: center;
-  }
-  
-  .perfil-acciones button {
-    padding: 10px 20px;
-    margin: 10px 5px;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.profile-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.profile-header {
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Estilos para botón outline */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: rgba(10, 102, 194, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-actions {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .profile-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Botones adicionales */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .perfil-acciones button:hover {
-    background-color: #2980b9;
-  }
-  
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #084d96;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
