@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="../Styles/curso.css">
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">
-          <img src="../Styles/logo.png" alt="Logo" />
+            <img src="../Styles/logo.png" alt="Logo" />
         </div>
         <nav class="nav-links">
             <a href="../Views/index.html">Inicio</a>
@@ -20,138 +22,182 @@
             <a href="../Views/Contact.html">Contactar</a>
         </nav>
         <div class="auth-buttons">
-          <a href="../Views/register.html" class="register">Registrarse</a>
-          <a href="../Views/signup.html" class="login">Iniciar sesión</a>
+            <a href="../Views/register.html" class="register">Registrarse</a>
+            <a href="../Views/signup.html" class="login">Iniciar sesión</a>
         </div>
-      </header>
-    <main class="container">  
-        <section class="course-description">
-            <h2>Descripción del Curso</h2>
-            <p>Aprende desde lo más básico hasta temas complejos como cálculo y álgebra avanzada. Ideal para estudiantes de todos los niveles.</p>
-        </section>
-
-        <section class="course-details">
-            <div class="details-grid">
-                <div class="detail-item">
-                    <h3>Duración</h3>
-                    <p>12 semanas</p>
-                </div>
-                <div class="detail-item">
-                    <h3>Nivel</h3>
-                    <p>Todos los niveles</p>
-                </div>
-                <div class="detail-item">
-                    <h3>Modalidad</h3>
-                    <p>Online</p>
-                </div>
+    </header>
+    <!--main-->
+    <div class="course-container">
+        <section class="intro">
+            <div class="info">
+                <img class="profilepic" src="../Styles/foto.png" alt="">
+                <a href="./profile.html"><h1>Álvaro Mendoza</h1></a>
+            </div>
+            <h1>Curso de Matemáticas</h1>
+            <p>¡Bienvenido a nuestro curso de Matemáticas! Este programa completo te brindará los conocimientos y
+                habilidades necesarias para desarrollar el pensamiento lógico y la resolución de problemas en diversas
+                áreas matemáticas...</p>
+            <div class="intro-buttons">
+                <button class="btn-outline">Gratuito</button>
+                <button class="btn-outline">Principiantes</button>
+                <button class="btn-primary">Inscribirse</button>
             </div>
         </section>
 
-        <section class="course-content">
-            <h2>Temario del Curso</h2>
-            <div class="modules-grid">
-                <div class="module">
-                    <h3>Módulo 01: Fundamentos</h3>
-                    <ul>
-                        <li>Operaciones básicas</li>
-                        <li>Números enteros y fracciones</li>
-                        <li>Potenciación y radicación</li>
-                    </ul>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ejemplo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <section class="modulos">
+            <div class="modulo">
+                <div class="modulo-header">
+                    <h2>01</h2>
+                    <h3>Fundamentos de Matemáticas</h3>
                 </div>
-                <div class="module">
-                    <h3>Módulo 02: Álgebra</h3>
-                    <ul>
-                        <li>Expresiones algebraicas</li>
-                        <li>Ecuaciones lineales</li>
-                        <li>Sistemas de ecuaciones</li>
-                    </ul>
-                </div>
-                <div class="module">
-                    <h3>Módulo 03: Geometría</h3>
-                    <ul>
-                        <li>Figuras geométricas</li>
-                        <li>Teoremas fundamentales</li>
-                        <li>Trigonometría básica</li>
-                    </ul>
-                </div>
-                <div class="module">
-                    <h3>Módulo 04: Cálculo</h3>
-                    <ul>
-                        <li>Límites y derivadas</li>
-                        <li>Integrales básicas</li>
-                        <li>Aplicaciones del cálculo</li>
-                    </ul>
-                </div>
-                <div class="module">
-                    <h3>Módulo 05: Probabilidad</h3>
-                    <ul>
-                        <li>Conceptos básicos</li>
-                        <li>Distribuciones</li>
-                        <li>Estadística descriptiva</li>
-                    </ul>
+                <div class="lecciones">
+                    <div class="leccion">
+                        <p class="titulo">Introducción a los Números y Operaciones</p>
+                        <span>Lección 01 · 45 Minutos</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Propiedades de las Operaciones</p>
+                        <span>Lección 02 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Expresiones Algebraicas Básicas</p>
+                        <span>Lección 03 · 45 Minutos</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="modulo">
+                <div class="modulo-header">
+                    <h2>02</h2>
+                    <h3>Álgebra y Ecuaciones</h3>
+                </div>
+                <div class="lecciones">
+                    <div class="leccion">
+                        <p class="titulo">Resolución de Ecuaciones de Primer Grado</p>
+                        <span>Lección 01 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Sistemas de Ecuaciones</p>
+                        <span>Lección 02 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Inecuaciones y Representación Gráfica</p>
+                        <span>Lección 03 · 45 Minutos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modulo">
+                <div class="modulo-header">
+                    <h2>03</h2>
+                    <h3>Álgebra y Ecuaciones</h3>
+                </div>
+                <div class="lecciones">
+                    <div class="leccion">
+                        <p class="titulo">Resolución de Ecuaciones de Primer Grado</p>
+                        <span>Lección 01 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Sistemas de Ecuaciones</p>
+                        <span>Lección 02 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Inecuaciones y Representación Gráfica</p>
+                        <span>Lección 03 · 45 Minutos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modulo">
+                <div class="modulo-header">
+                    <h2>04</h2>
+                    <h3>Álgebra y Ecuaciones</h3>
+                </div>
+                <div class="lecciones">
+                    <div class="leccion">
+                        <p class="titulo">Resolución de Ecuaciones de Primer Grado</p>
+                        <span>Lección 01 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Sistemas de Ecuaciones</p>
+                        <span>Lección 02 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Inecuaciones y Representación Gráfica</p>
+                        <span>Lección 03 · 45 Minutos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modulo">
+                <div class="modulo-header">
+                    <h2>05</h2>
+                    <h3>Álgebra y Ecuaciones</h3>
+                </div>
+                <div class="lecciones">
+                    <div class="leccion">
+                        <p class="titulo">Resolución de Ecuaciones de Primer Grado</p>
+                        <span>Lección 01 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Sistemas de Ecuaciones</p>
+                        <span>Lección 02 · 1 Hora</span>
+                    </div>
+                    <div class="leccion">
+                        <p class="titulo">Inecuaciones y Representación Gráfica</p>
+                        <span>Lección 03 · 45 Minutos</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <section class="instructor-section">
-            <h2>Conoce al instructor</h2>
-            <div class="instructor-profile">
-                <div class="instructor-photo">
-                    <img src="../Styles/foto.png" alt="Juan Pérez">
-                </div>
-                <div class="instructor-info">
-                    <h3>Juan Pérez</h3>
-                    <p class="instructor-title">Profesor de Matemáticas</p>
-                    <p class="instructor-bio">Licenciado en Matemáticas con más de 10 años de experiencia docente en educación secundaria y universitaria. Especializado en didáctica de las matemáticas para hacer accesibles los conceptos complejos a estudiantes de todos los niveles.</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="enrollment-section">
-            <div class="enrollment-card">
-                <h2>¡Inscríbete al curso ahora!</h2>
-                <p class="price">$99.99 <span class="original-price">$149.99</span></p>
-                <p class="discount">33% de descuento</p>
-                <ul class="benefits">
-                    <li>Acceso a todos los módulos</li>
-                    <li>Material descargable</li>
-                    <li>Certificado al completar</li>
-                    <li>Soporte del instructor</li>
-                </ul>
-                <button class="enroll-button">Inscribirse al Curso</button>
+        <section class="comments">
+            <h2>Comentarios</h2>
+            <div class="comment">
+                <p class="name">Rene Sandoval Maron ⭐⭐⭐⭐☆</p>
+                <p class="text">La tutoría de diseño web proporcionó una base sólida para mí. ¡Lo recomiendo
+                    encarecidamente!</p>
             </div>
         </section>
-        
-    </main>
+    </div>
+
     <footer class="site-footer">
         <div class="footer-content">
-          <div class="footer-column">
-            <h4>Inicio</h4>
-            <ul>
-              <li><a href="#">Beneficios</a></li>
-              <li><a href="#">Tutorias</a></li>
-              <li><a href="#">Testimonios</a></li>
-              <li><a href="#">Preguntas frecuentes</a></li>
-            </ul>
-          </div>
-    
-          <div class="footer-column">
-            <h4>Sobre Nosotros</h4>
-            <ul>
-              <li><a href="#">Vision</a></li>
-              <li><a href="#">Logros</a></li>
-              <li><a href="#">Metas</a></li>
-            </ul>
-          </div>
-    
-          <div class="footer-column contact-info">
-            <p class="copyright">© TucanClase.</p>
-            <p class="email">L21530365@concun.tecnm.mx</p>
-            <p class="phone">+52 998 381 4748</p>
-            <p class="address">Cancun, Quintana Roo, MX</p>
-          </div>
+            <div class="footer-column">
+                <h4>Inicio</h4>
+                <ul>
+                    <li><a href="#">Beneficios</a></li>
+                    <li><a href="#">Tutorias</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Sobre Nosotros</h4>
+                <ul>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Logros</a></li>
+                    <li><a href="#">Metas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-info">
+                <p class="copyright">© TucanClase.</p>
+                <p class="email">L21530365@concun.tecnm.mx</p>
+                <p class="phone">+52 998 381 4748</p>
+                <p class="address">Cancun, Quintana Roo, MX</p>
+            </div>
         </div>
-      </footer>
+    </footer>
 
 </body>
+
 </html>
